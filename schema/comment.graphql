@@ -1,0 +1,10 @@
+extend type Query {
+  listCommentByTaskId(taskId: ID!): [Comment]!
+}
+
+type Comment {
+  id: ID!
+  body: String!
+  commentId: ID!
+  createdAt: UnixTime
+}

@@ -1,0 +1,14 @@
+extend type Query {
+  getImage(type: ImageType, objectId: ID!): Image
+}
+
+type Image {
+  id: ID!
+  url: URL!
+  objectId: ID!
+}
+
+enum ImageType {
+  TASK
+  COMMENT
+}

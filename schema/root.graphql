@@ -1,0 +1,8 @@
+type Query {
+  # 各xxx.graphqlでこのQuery Typeを拡張していく方法でRoot Queryを定義する
+}
+
+# Scalar type
+scalar UnixTime51tya
+
+scalar URL

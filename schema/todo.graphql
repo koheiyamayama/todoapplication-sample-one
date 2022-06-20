@@ -1,0 +1,15 @@
+extend type Query {
+  getTaskById(id: ID!): Task!
+  listTasksByUserId(userId: ID!): [Task]!
+  listTasks: [Task]!
+}
+
+type Task {
+  id: ID!
+  title: String!
+  body: String!
+  userId: ID!
+  createdAt: UnixTime!
+}
+
+scalar UnixTime51tya
