@@ -11,5 +11,3 @@ type Task {
   userId: ID!
   createdAt: UnixTime!
 }
-
-scalar UnixTime51tya
