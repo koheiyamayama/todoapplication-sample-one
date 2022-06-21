@@ -1,8 +1,9 @@
 type Query {
   # 各xxx.graphqlでこのQuery Typeを拡張していく方法でRoot Queryを定義する
+  healthCheck: Boolean!
 }
 
 # Scalar type
-scalar UnixTime51tya
+scalar UnixTime
 
 scalar URL
