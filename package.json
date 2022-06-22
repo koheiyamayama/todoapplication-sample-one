@@ -1,7 +1,4 @@
 {
   "name": "todoapplication-sample-one",
-  "packageManager": "yarn@3.2.1",
-  "dependencies": {
-    "graphql-faker": "^2.0.0-rc.25"
-  }
+  "packageManager": "yarn@3.2.1"
 }
