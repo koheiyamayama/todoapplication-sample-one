@@ -5,5 +5,4 @@ extend type Query {
 type User {
   id: ID!
   name: String!
-  passwordDigest: String!
 }

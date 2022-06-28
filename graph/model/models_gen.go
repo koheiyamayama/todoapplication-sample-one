@@ -30,9 +30,8 @@ type Task struct {
 }
 
 type User struct {
-	ID             string `json:"id"`
-	Name           string `json:"name"`
-	PasswordDigest string `json:"passwordDigest"`
+	ID   string `json:"id"`
+	Name string `json:"name"`
 }
 
 type ImageType string
