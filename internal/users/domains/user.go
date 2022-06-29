@@ -1,9 +1,9 @@
 package users
 
 import (
-	"crypto/rand"
 	"errors"
 	"fmt"
+	"todoapplication-sample-one/bff/internal/libs"
 )
 
 type (
@@ -20,13 +20,13 @@ type (
 )
 
 func NewUser(name Name) (User, error) {
-	id, err := generateUserID(20)
+	id, err := libs.GenerateUserID(20)
 
 	if err != nil {
 		return nil, err
 	}
 
-	return newUser(id, name)
+	return newUser(ID(id), name)
 }
 
 func newUser(id ID, name Name) (User, error) {
@@ -47,20 +47,4 @@ func (id ID) Valid() (bool, error) {
 	} else {
 		return ret, errors.New("ID is invalid")
 	}
-}
-
-func generateUserID(digit uint32) (ID, error) {
-	const letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-
-	b := make([]byte, digit)
-	if _, err := rand.Read(b); err != nil {
-		return ID(""), errors.New("unexpected error")
-	}
-
-	var result string
-	for _, v := range b {
-		result += string(letters[int(v)%len(letters)])
-	}
-
-	return ID(result), nil
 }
